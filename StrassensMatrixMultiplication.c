@@ -1,5 +1,12 @@
+// Yash Gupta
+// 500125397 
 #include<stdio.h>
+#include <time.h>
 int main(){
+   clock_t start, end;
+    double cpu_time_used;
+
+    start = clock();
    int z[2][2];
    int i, j;
    int m1, m2, m3, m4 , m5, m6, m7;
@@ -40,5 +47,9 @@ int main(){
       for(j = 0; j < 2; j++)
          printf("%d\t", z[i][j]);
    }
+   end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+
+    printf("\nCPU time used: %f seconds\n", cpu_time_used);
    return 0;
 }
